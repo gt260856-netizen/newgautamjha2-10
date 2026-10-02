@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gautam Jha | Free Stock Market Learning</title>
+<meta name="description" content="Learn trade planning, risk control and chart basics in simple English with Gautam Jha. Educational content only.">
+<meta name="theme-color" content="#13091a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2068399947120704');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2068399947120704&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+  /* Theme: MIDNIGHT FUCHSIA — violet-black, fuchsia accent, cyan detail; headline + mini risk:reward lesson, shiny CTA */
+  :root{
+    color-scheme:dark;
+    --bg:#13091a; --panel:rgba(40,20,52,.55); --edge:rgba(233,76,255,.22);
+    --text:#f8f1fb; --muted:#b9a5c4; --soft:#e4d6ec;
+    --fuchsia:#e94cff; --fuchsia2:#ff7ad9; --cyan:#6fe7ff; --risk:#ff7a7a;
+    --en:"Schibsted Grotesk",-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--en);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;
+       min-height:100vh;overflow-x:hidden;
+       background-image:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(233,76,255,.13),transparent 70%)}
+
+  .wrap{max-width:430px;margin:0 auto;padding:calc(22px + env(safe-area-inset-top)) 16px calc(22px + env(safe-area-inset-bottom));
+        display:flex;flex-direction:column;gap:12px}
+  .glass{background:var(--panel);border:1px solid var(--edge);border-radius:22px;
+         -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+
+  .card{padding:22px 18px 20px}
+  .who{display:flex;align-items:center;gap:10px}
+  .av{width:44px;height:44px;border-radius:12px;position:relative;overflow:hidden;flex:0 0 auto;display:grid;place-items:center;
+      background:#2c1638;border:1.5px solid var(--fuchsia);font-weight:900;font-size:15px;color:var(--fuchsia)}
+  .av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .who b{display:block;font-size:16px;font-weight:800;line-height:1.2}
+  .who small{display:block;font-size:12px;color:var(--cyan)}
+
+  h1{margin-top:18px;font-size:30px;line-height:1.15;font-weight:900;letter-spacing:-.6px;text-wrap:balance}
+  h1 span{color:var(--fuchsia)}
+  .sub{margin-top:10px;font-size:14.5px;color:var(--soft)}
+
+  /* mini lesson */
+  .lesson{margin-top:18px;padding:14px;border-radius:16px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.08)}
+  .lesson .k{font-size:11px;font-weight:800;letter-spacing:1.3px;color:var(--cyan);text-transform:uppercase}
+  .lesson h2{margin-top:4px;font-size:16px;font-weight:800;line-height:1.35}
+  .bar{display:flex;gap:4px;margin-top:12px;height:30px}
+  .bar div{display:grid;place-items:center;border-radius:8px;font-size:12px;font-weight:800;color:#13091a}
+  .bar .r{flex:1;background:var(--risk)}
+  .bar .w{flex:2;background:var(--cyan)}
+  .legend{display:flex;justify-content:space-between;margin-top:6px;font-size:11.5px;color:var(--muted)}
+  .lesson p{margin-top:10px;font-size:13px;color:var(--soft)}
+
+  /* CTA: light shine sweep + gentle breathing */
+  .cta{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:9px;width:100%;margin-top:20px;padding:16px 14px;border-radius:16px;
+       text-decoration:none;color:#fff;font-weight:900;font-size:17.5px;line-height:1.3;
+       background:linear-gradient(100deg,var(--fuchsia),var(--fuchsia2));
+       box-shadow:0 8px 24px rgba(233,76,255,.35);animation:breathe 2.6s ease-in-out infinite;transition:transform .15s}
+  .cta::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;
+       background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:shine 3.2s ease-in-out infinite}
+  .cta:active{transform:scale(.97)}
+  .cta:focus-visible{outline:2px solid #fff;outline-offset:3px}
+  @keyframes shine{0%,55%{left:-60%}100%{left:130%}}
+  @keyframes breathe{0%,100%{transform:scale(1);box-shadow:0 8px 24px rgba(233,76,255,.35)}50%{transform:scale(1.025);box-shadow:0 10px 32px rgba(233,76,255,.55)}}
+
+  .timer{display:flex;align-items:center;gap:11px;margin-top:14px;font-size:13px;color:var(--soft)}
+  .ring{width:40px;height:40px;position:relative;flex:0 0 auto}
+  .ring svg{transform:rotate(-90deg)}
+  .ring .bg{stroke:rgba(255,255,255,.1)}
+  .ring .fg{stroke:var(--fuchsia);stroke-linecap:round;transition:stroke-dashoffset 1s linear}
+  .ring b{position:absolute;inset:0;display:grid;place-items:center;font-weight:900;font-size:15px;color:var(--fuchsia)}
+  .free{margin-top:10px;font-size:12px;color:var(--muted)}
+
+  .disc{padding:12px 14px;font-size:11px;line-height:1.7;color:var(--soft);border-radius:16px;border-color:rgba(111,231,255,.22);background:rgba(111,231,255,.04)}
+  .disc b{color:var(--cyan)}
+  .foot{text-align:center;font-size:11px;line-height:1.6;color:var(--muted);padding:2px 6px}
+  .foot a{color:var(--muted)}
+
+  @media(prefers-reduced-motion:reduce){.cta,.cta::after{animation:none}.ring .fg{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <main class="card glass">
+    <div class="who">
+      <div class="av"><img src="https://github.com/growoneads/s/releases/download/j/gautamjha101.jpg" alt="Gautam Jha" width="44" height="44" fetchpriority="high" onerror="this.remove()">GJ</div>
+      <div><b>Gautam Jha</b><small>Free stock market learning</small></div>
+    </div>
+
+    <h1>Trade with a <span>plan</span>, not a guess</h1>
+    <p class="sub">Learn trade planning, risk control and chart basics in simple English.</p>
+
+    <div class="lesson">
+      <span class="k">Sample lesson</span>
+      <h2>What is risk : reward?</h2>
+      <div class="bar"><div class="r">1</div><div class="w">2</div></div>
+      <div class="legend"><span>Risk you accept</span><span>Target you plan for</span></div>
+      <p>If you plan to risk 1 unit while aiming for 2 units, your risk : reward is 1 : 2. Deciding this before entering is part of a trading plan.</p>
+    </div>
+
+    <a href="#" class="cta js-cta">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71l-4.14-3.06-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+      Join Free Telegram Channel
+    </a>
+
+    <div class="timer js-timer-line">
+      <div class="ring">
+        <svg width="40" height="40" viewBox="0 0 44 44">
+          <circle class="bg" cx="22" cy="22" r="19" fill="none" stroke-width="4"/>
+          <circle class="fg js-ring" cx="22" cy="22" r="19" fill="none" stroke-width="4" stroke-dasharray="119.4" stroke-dashoffset="0"/>
+        </svg>
+        <b class="js-timer">8</b>
+      </div>
+      <div>Channel opens automatically in a few seconds</div>
+    </div>
+    <p class="free">100% Free • No payment • Leave anytime</p>
+  </main>
+
+  <div class="disc glass">
+    <p><b>Disclaimer:</b> All content is for educational purposes only and is not investment advice or a buy/sell recommendation. We are not SEBI-registered advisors. Trading involves risk, including loss of capital. Past performance does not guarantee future results.</p>
+  </div>
+
+  <div class="foot">
+    © <span id="yr"></span> Gautam Jha • <a href="#">Privacy Policy</a> • <a href="#">Terms</a><br>
+    This site is not a part of the Facebook website or Meta Platforms, Inc.
+  </div>
+</div>
+
+<script>
+(function () {
+  // ================= SETTINGS =================
+  var TG_LINK = "https://t.me/+snR9pb7UDWYyZjQ1";
+  var AUTO_REDIRECT = true;   // false = sirf button se Telegram khulega
+  var TIMER_SECONDS = 8;
+  var RETURN_DELAY_MS = 300;  // dobara aane wale ko kitni jaldi bhejna hai
+  // ============================================
+
+  var KEY_VISITED = "rtt_visited", KEY_EVT = "rtt_sub";
+  var loadTime = Date.now();
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  function setFlag(k){
+    try{localStorage.setItem(k,"1")}catch(e){}
+    document.cookie = k+"=1; max-age="+(60*60*24*180)+"; path=/; SameSite=Lax";
+  }
+  function hasFlag(k){
+    try{ if(localStorage.getItem(k)) return true }catch(e){}
+    return document.cookie.indexOf(k+"=1") !== -1;
+  }
+  function goTelegram(){ setFlag(KEY_VISITED); window.location.href = TG_LINK; }
+
+  // TEST MODE: URL ke end me ?test lagao -> purane flags mit jayenge, har baar page normal khulega
+  if (/[?&]test\b/.test(location.search)) {
+    [KEY_VISITED, KEY_EVT].forEach(function(k){
+      try{localStorage.removeItem(k)}catch(e){}
+      document.cookie = k+"=; max-age=0; path=/; SameSite=Lax";
+    });
+  }
+
+  // Human interaction check: touch / scroll / mouse / keyboard
+  var interacted = false;
+  function markHuman(e){ if (e && e.isTrusted === false) return; interacted = true; }
+  ["pointerdown","touchstart","mousemove","keydown","wheel"].forEach(function(ev){
+    window.addEventListener(ev, markHuman, {passive:true, capture:true});
+  });
+  window.addEventListener("scroll", markHuman, {passive:true});
+
+  // Subscribe: sirf asli click, sirf ek baar, bot filter
+  function fireEventOnce(e){
+    if (hasFlag(KEY_EVT)) return;
+    if (navigator.webdriver) return;
+    if (Date.now() - loadTime < 800) return;
+    if (e && e.isTrusted === false) return;
+    if (!interacted) return;
+    if (typeof fbq === "function") fbq("track","Subscribe",{},{eventID:"rtt_sub_"+loadTime});
+    setFlag(KEY_EVT);
+  }
+
+  var cta = document.querySelector(".js-cta");
+  var timerLine = document.querySelector(".js-timer-line");
+  var timerEl = document.querySelector(".js-timer");
+  var ring = document.querySelector(".js-ring");
+  var C = 119.4, countdown;
+
+  cta.href = TG_LINK;
+  cta.addEventListener("click", function(e){
+    e.preventDefault();
+    if (countdown) clearInterval(countdown);
+    fireEventOnce(e);
+    setTimeout(goTelegram, 300);
+  });
+
+  // Returning visitor: timer skip, turant Telegram, event nahi
+  if (hasFlag(KEY_VISITED)) {
+    timerLine.innerHTML = "<div>Opening channel…</div>";
+    setTimeout(goTelegram, RETURN_DELAY_MS);
+    return;
+  }
+
+  if (!AUTO_REDIRECT) { timerLine.style.display = "none"; return; }
+  var left = TIMER_SECONDS;
+  function paint(){
+    timerEl.textContent = left;
+    ring.style.strokeDashoffset = (C * (1 - left / TIMER_SECONDS)).toFixed(1);
+  }
+  paint();
+  countdown = setInterval(function(){
+    left--; paint();
+    if (left <= 0){ clearInterval(countdown); goTelegram(); }
+  }, 1000);
+})();
+</script>
+</body>
+</html>
